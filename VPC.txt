@@ -1,0 +1,12 @@
+provider "aws" {
+  export AWS_ACCESS_KEY_ID="AKIAW2WRLLPNMFZHGWSA"
+  export AWS_SECRET_ACCESS_KEY="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"
+  region  = "ap-south-1"
+}
+resource "aws_vpc" "main" {
+  cidr_block       = "172.16.0.0/28"
+
+  tags = {
+    Name = "main"
+  }
+}
